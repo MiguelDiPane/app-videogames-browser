@@ -2,7 +2,7 @@
     <mat-form-field>
         <mat-label>Sort</mat-label>
         <!--El binding bidireccional usa la variable sort-->
-        <mat-select panelClass="sort-select" [(ngModel)]="sort">
+        <mat-select panelClass="sort-select" [(ngModel)]="sort" (selectionChange)="searchGames(sort)">
             <mat-option value="name">Name</mat-option>
             <mat-option value="-released">Released</mat-option>
             <mat-option value="-added">Added</mat-option>
@@ -15,6 +15,7 @@
 </div>
 
 <div class="games">
+<<<<<<< Updated upstream
     <div class="game">
         <img src="https://fotografias-neox.atresmedia.com/clipping/cmsimages02/2016/08/30/F1311F3B-298C-42B7-9D70-DD40576FAFC1/98.jpg?crop=624,351,x10,y0&width=1900&height=1069&optimize=high&format=webply" alt="thumbnail"
         class="game-thumbnail">
@@ -22,6 +23,21 @@
             <p class="game-name">Name</p>
             <div class="game-platforms">
                 <img src="https://img.freepik.com/iconos-gratis/logo-playstation_318-10089.jpg" alt="slug" class="game-platform">
+=======
+    <ng-container *ngFor="let game of games">
+        <div class="game" (click)="openGameDetails(game.id)">
+            <img *ngIf="game.background_image" src="{{game.background_image}}" alt="thumbnail"
+            class="game-thumbnail">
+            <img *ngIf="!game.background_image" src="https://cdn.unenvironment.org/s3fs-public/inline-images/Play_1_Photo_by_Pixahive.jpg?VersionId=null" alt="thumbnail"
+            class="game-thumbnail">
+            <div class="game-description">
+                <p class="game-name">{{game.name}}</p>
+                <div class="game-platforms">
+                    <img 
+                    *ngFor="let gamePlatform of game.parent_platforms"
+                    src="assets/images/platforms/{{ gamePlatform.platform.slug }}.svg" alt="{{ gamePlatform.platform.slug }}" class="game-platform">
+                </div>
+>>>>>>> Stashed changes
             </div>
         </div>
     </div>

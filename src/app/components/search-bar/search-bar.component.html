@@ -1,8 +1,11 @@
 <div class="search-container">
     <!--Pasa el form como un argumento de la función que se ejecuta con el evento ngSubmit-->
     <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
-        <span class="logo" routerLink="/">NgVGDB</span>
-        <input class="search-input" name="search" type="text" ngModel placeholder="Search 500.000+ games">
-        <button class="search-button">Search</button>
+        <span class="logo" routerLink="/">Videogames Browser</span>
+        <div class="search-bar">
+            <input class="search-input" name="search" type="text" ngModel placeholder="Search 500.000+ games">
+            <button class="search-button">Search</button>
+        </div>
+
     </form>
 </div>

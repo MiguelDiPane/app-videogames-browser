@@ -1,11 +1,17 @@
 .filters{
-    max-width: 1200px;
-    margin: 20px auto;
-    padding-left: 20px;
+    width: 100%;
+    margin-top: 40px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+mat-form-field{
+    width: 30%;
+    
 }
 ::ng-deep{
     .mat-form-field-infix{
-        background-color: #3f51b5;
+        background-color: #2d323a;
         border-color: white;
         border-top: none;
         padding-left: 5px !important;
@@ -32,7 +38,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1200px;
+    
 }
 .game{
     width: 380px;
@@ -42,13 +48,14 @@
     position: relative;
     border-radius: 5px;
     background-color: #202020;
-    box-shadow: 4px 3px 8px 0px rgb(200 152 44);
+    box-shadow: 4px 3px 8px 0px rgb(19, 29, 77);
     transition-duration: 0.3s;
     cursor: pointer;
 
     &:hover{
-        box-shadow: 4px 3px 11px 6px rgb(200 152 44);
+        box-shadow: 4px 3px 11px 6px rgb(19, 29, 77);
         transform: translate(-3px);
+        filter: brightness(120%);
     }
 
     &-thumbnail{
@@ -68,7 +75,8 @@
         height: 100%;
         width: 100%;
         z-index: 2;
-        box-shadow: -1px -165px 61px -40px rgba(0, 0, 0, 0.849) inset;}
+        box-shadow: -1px -160px 61px -40px rgba(0, 0, 0, 0.952) inset;
+    }
     &-name{
         
         color: white;

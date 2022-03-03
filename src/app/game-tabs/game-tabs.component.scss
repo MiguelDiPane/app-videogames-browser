@@ -1,0 +1,101 @@
+.game{
+    &-tabs{
+        background-color: #2d323a9a;
+        border-radius: 10px;
+        color: white;
+        text-align: left;
+        padding: 10px;
+        margin-top: 10px;
+        margin-left: 10%;
+        width: 80%;
+        padding-top: 15px;
+        &-par{
+            padding: 20px 20px 0 20px;
+            margin-bottom: 0;
+        }
+
+        &-link{
+            color: white;
+        }
+
+        ::ng-deep .mat-tab-labels{
+            justify-content: center;
+            background: #2a3546;
+            color: white;
+        }
+
+        &-votes{
+            padding-left: 20px;
+            display: flex;
+    
+            &-count{
+                margin-left: 5px;
+                margin-right: 10px;
+                vertical-align: super;
+            }
+    
+            &-up{
+                color: #5ee432;
+            }
+            &-down{
+                color: red;
+            }
+        }
+    }
+
+
+
+    &-description{
+        padding: 20px;
+    }
+
+    &-screenshot{
+        margin-top: 5px;
+        width: calc(50% - 10px);
+        
+        &:nth-child(even){
+            margin-left: 10px;
+        }
+    }
+
+    &-trailer {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    &-ratings{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+
+::ng-deep mwl-gauge{
+    width: 120px;
+    height: 120px;
+    display: block;
+
+    .dial{
+        stroke-width: 10;
+    }
+    .value {
+        stroke-dasharray: none;
+        stroke-width: 13;
+    }
+    .value-text{
+        fill: white;
+        font-weight: 700;
+        font-size: 24px;
+    }
+}
+
+.game-gauge{
+    &-label{
+        font-size: 15px;
+        color: white;
+        position: relative;
+        bottom: 50px;
+        right: -25px;
+    }
+}
