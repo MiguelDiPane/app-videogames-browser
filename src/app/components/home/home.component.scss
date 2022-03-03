@@ -1,0 +1,91 @@
+.filters{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+::ng-deep{
+    .mat-form-field-infix{
+        background-color: #3f51b5;
+        border-color: white;
+        border-top: none;
+        padding-left: 5px !important;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .mat-select-value,
+    .mat-select-arrow,
+    .mat-form-field-hide-placeholder .mat-select-placeholder,
+    .mat-form-field-appearance-legacy .mat-form-field-label{
+        color: white !important;
+        opacity: 1;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-label{
+        padding-left: 5px;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-underline{
+        background-color: white !important;
+    }
+
+}
+
+.games{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+}
+.game{
+    width: 380px;
+    margin: 10px;
+    height: 330px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    background-color: #202020;
+    box-shadow: 4px 3px 8px 0px rgb(200 152 44);
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: 4px 3px 11px 6px rgb(200 152 44);
+        transform: translate(-3px);
+    }
+
+    &-thumbnail{
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+    }
+
+    &-description{
+        position: absolute;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        box-shadow: -1px -165px 61px -40px rgba(0, 0, 0, 0.849) inset;}
+    &-name{
+        
+        color: white;
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    &-platforms{
+        display: flex;
+
+    }
+    &-platform{
+        width: 20px;
+        margin-right: 10px;
+    }
+}
+
