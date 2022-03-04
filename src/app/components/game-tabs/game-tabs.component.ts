@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Game } from '../models';
+import { Game } from 'src/app/models';
+
 
 @Component({
   selector: 'app-game-tabs',
