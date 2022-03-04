@@ -1,13 +1,9 @@
-<<<<<<< Updated upstream
-import { Component, OnInit } from '@angular/core';
-=======
 import { APIResponse } from './../../models';
 import { HttpService } from './../../services/http.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Game } from 'src/app/models';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-home',
@@ -16,14 +12,6 @@ import { Subscription } from 'rxjs';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   public sort: string;
-<<<<<<< Updated upstream
-  
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-=======
   public games: Array<Game>;
   private routeSub: Subscription;
   private gameSub: Subscription;
@@ -64,5 +52,4 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.routeSub.unsubscribe();
     }
   }
->>>>>>> Stashed changes
 }

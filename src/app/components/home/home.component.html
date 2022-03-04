@@ -15,15 +15,6 @@
 </div>
 
 <div class="games">
-<<<<<<< Updated upstream
-    <div class="game">
-        <img src="https://fotografias-neox.atresmedia.com/clipping/cmsimages02/2016/08/30/F1311F3B-298C-42B7-9D70-DD40576FAFC1/98.jpg?crop=624,351,x10,y0&width=1900&height=1069&optimize=high&format=webply" alt="thumbnail"
-        class="game-thumbnail">
-        <div class="game-description">
-            <p class="game-name">Name</p>
-            <div class="game-platforms">
-                <img src="https://img.freepik.com/iconos-gratis/logo-playstation_318-10089.jpg" alt="slug" class="game-platform">
-=======
     <ng-container *ngFor="let game of games">
         <div class="game" (click)="openGameDetails(game.id)">
             <img *ngIf="game.background_image" src="{{game.background_image}}" alt="thumbnail"
@@ -37,8 +28,7 @@
                     *ngFor="let gamePlatform of game.parent_platforms"
                     src="assets/images/platforms/{{ gamePlatform.platform.slug }}.svg" alt="{{ gamePlatform.platform.slug }}" class="game-platform">
                 </div>
->>>>>>> Stashed changes
             </div>
         </div>
-    </div>
+    </ng-container>
 </div>

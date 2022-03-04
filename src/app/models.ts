@@ -1,11 +1,7 @@
 //Aca importa la interfaz Game
 export interface Game{
-<<<<<<< Updated upstream
-    backround_image: string;
-=======
     id: string,
     background_image: string;
->>>>>>> Stashed changes
     name: string;
     released: string;
     metacritic_url: string;
@@ -22,7 +18,7 @@ export interface Game{
 }
 
 export interface APIResponse<T>{
-    result: Array<T>;
+    results: Array<T>;
 }
 
 interface Genre{
@@ -30,7 +26,7 @@ interface Genre{
 }
 interface ParentPlatform{
     platform:{
-        name:string;
+        slug:string;
     };
 }
 interface Publisher{
